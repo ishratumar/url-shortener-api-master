@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Poppins, Inter, Avenir, Helvetica, Arial, sans-serif;
+
+  --cyan: hsl(180, 66%, 49%);
+  --dark-violet: hsl(257, 27%, 26%);
+
+/* ### Secondary */
+
+ --red: hsl(0, 87%, 67%);
+
+/* ### Neutral */
+
+ --gray: hsl(0, 0%, 75%);
+ --grayish-violet: hsl(257, 7%, 63%);
+ --very-dark-blue: hsl(255, 11%, 22%);
+ --very-dark-violet: hsl(260, 8%, 14%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.max-width {
+  @apply px-5 lg:max-w-5xl lg:mx-auto xl:max-w-6xl 2xl:px-0;
+}
+img {
+  max-width: 100%;
+}
+ul, li {
+  list-style-type: none;
+}
+p {
+  line-height: 1.8;
+}
+h1 {
+  line-height: 1.2 !important;
+}
+.cta-btn {
+  background-color: var(--cyan);
+  @apply py-2 px-4 text-white hover:opacity-75 transition-all duration-150 cursor-pointer;
+}
+.shortener {
+  background-color: var(--dark-violet);
+  height: 17.188rem;
+  border-radius: 8px;
+}
+.shortener img {
+  height: 17.188rem;
+  @apply w-full rounded-lg;
+}
+.shortener .form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+.boost {
+  background-color: var(--dark-violet);
+  height: 17.188rem;
+}
+.boost img {
+  height: 17.188rem;
+  @apply w-full;
+}
+.boost .boost-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media(min-width: 1024px) {
+  .card article:nth-child(3) {
+    transform: translateY(2rem)
+  }
+  .card article:last-child {
+    transform: translateY(4rem)
+  }
+  .line {
+    @apply bg-cyan-500 h-2 w-full absolute;
+    top: 50%;
+  }
+}
+
